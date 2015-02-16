@@ -1,0 +1,11 @@
+div.leftside {
+    float: left;
+    width: 49%;
+  }
+
+
+div.rightside {
+  float: right;
+  text-align: right;
+  width: 49%;
+}
