@@ -6,6 +6,10 @@ div.leftside {
 
 div.rightside {
   float: right;
-  text-align: right;
   width: 49%;
+}
+
+div.center {
+  float: left;
+  height: 98%;
 }

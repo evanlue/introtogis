@@ -51,84 +51,84 @@
 				</p>
 			</section>
 
-<section><h2>GNSS</h2><p>Global Navigation Satellite Systems</p><img height='450px' src='images/fig5-1.jpg'><p><small>Bolstad 2012, Fig 5-1</small></p></section>
-<section><h2>GNSS Systems*</h2><p><ul><li>GPS - USA - NAVSTAR Global Positioning System</li><li>GLONASS - Russian Federation - Global Navigation Satellite System</li><li>BeiDou - China - regional, global in development</li><li>Galileo - EU - in development</li></ul></p><p><small>*Yes, the last "S" in "GNSS" also stands for "Systems"</small></p></section>
-<section><h2>Segments</h2><p></p><img height='450px' src='images/fig5-2.gif'><p><small>Bolstad 2012, Fig 5-2</small></p></section>
-<section><h2>GPS Constellation</h2><p><ul><li>Constellation - a collection of satellites working together</li><li>20,000 km above earth</li><li>2x daily, above horizon 8+ hrs per day</li><li>The book suggests 4-8 satellites visible at any time</li><li>21 active + 3 spare, and some more</li></ul></p><img height='300px' src='images/fig5-3.gif'> <img height='300px' src='images/ConstellationGPS.gif'><p><small>Bolstad 2012, Fig 5-3 and Wikimedia Commons</small></p></section>
-<section><h2>GNSS User</h2><p></p><img height='450px' src='images/fig5-4_left.jpg'> <img height='450px' src='images/fig5-4_right.jpg'><p><small>Bolstad 2012, Fig 5-4</small></p></section>
-<section><h2>GPS Signals</h2><p><ul><li>Pseudorandom noise (PRN) - signals similar to noise, but consisting short segments of code.</li><li>C/A code - Coded signal; coarse acquisition, PRN.</li><li>P-code - Coded signal; Precision code, PRN.</li><li>L1 - Carrier signal; C/A and P code.</li><li>L2 - Carrier signal; P code.</li></ul></p><img height='250px' src='images/table5-1.jpg'><p><small>Bolstad 2012, Table 5-1</small></p></section>
-<section><h2>GNSS Terms</h2><p><ul><li>Almanac - system info on time and status of a constellation.</li><li>Ephemeris data - information on the position of satellites and their expectes positions.</li></ul></p></section>
-<section><h2>Broadcast Signals</h2><p></p><img height='450px' src='images/fig5-5.jpg'><p><small>Bolstad 2012, Fig 5-5</small></p></section>
-<section><h2>Range</h2><p>The distance between two objects.</p><p>Range = (speed of light) * (travel time)</p><img height='300px' src='images/fig5-6.gif'><p><small>Bolstad 2012, Fig 5-6</small></p></section>
-<section><h2>Decoded C/A Signal</h2><p></p><img height='450px' src='images/fig5-7.gif'><p><small>Bolstad 2012, Fig 5-7</small></p></section>
-<section><h2>Range Measurements cont.</h2><p></p><img height='450px' src='images/fig5-8.gif'><p><small>Bolstad 2012, Fig 5-8</small></p></section>
-<section><h2>Range Uncertainty</h2><p>Ionospheric/Atmospheric Delays - varied speed traveling through the ionsphere/atmosphere.</p><p>Dual Frequency - Some receivers collect from multiple GNSS signals and remove ionospheric errors.</p><p>Multipath - Signals reflected off of objects; take longer to reach the object and are weaker.</p><img height='300px' src='images/fig5-9.gif'><p><small>Bolstad 2012, Fig 5-9</small></p></section>
-<section><h2>The Horizon</h2><p>More atmosphere to pass through.</p><img height='450px' src='images/fig5-10.jpg'><p><small>Bolstad 2012, Fig 5-10</small></p></section>
-<section><h2>Positional Accuracy</h2><p></p><img height='450px' src='images/fig5-11.gif'><p><small>Bolstad 2012, Fig 5-11</small></p></section>
-<section><h2>Dilution of Precison (DOP)</h2><p>Describes effects of satellite location on precision.<ul><li>PDOP - Position (3D). Lower is better, 1-5 is good.</li><li>Also: HDOP (Horizontal), VDOP (Vertical), TDOP (Time), GDOP (Geometric)</li></ul></p><img height='300px' src='images/fig5-12.gif'><p><small>Bolstad 2012, Fig 5-12</small></p></section>
-<section><h2>GPS Error</h2><p></p><img height='350px' src='images/fig5-13bot.gif'> <img height='350px' src='images/fig5-13top.gif'><p><small>Bolstad 2012, Fig 5-13</small></p></section>
-<section><h2>Differential GNSS Positioning</h2><p><ul><li>Differential Positioning - Using one or more receivers.</li><li>Base Station - A receiver at a known location.</li></ul></p><img height='350px' src='images/fig5-14.gif'><p><small>Bolstad 2012, Fig 5-14</small></p></section>
-<section><h2>Differential Correction</h2><p></p><img height='450px' src='images/fig5-15.gif'><p><small>Bolstad 2012, Fig 5-15</small></p></section>
-<section><h2>Real-Time vs. Post-Processing</h2><p></p><img height='450px' src='images/fig5-16.gif'><p><small>Bolstad 2012, Fig 5-16</small></p></section>
-<section><h2>GPS Radio Beacons</h2><p><ul><li>Radio beacons - broadcasted signal correction.</li><li>Beacon receivers - a GPS must have a beacon receiver to use the radio beacons</li></ul></p><img height='350px' src='images/fig5-17.gif'><p><small>Bolstad 2012, Fig 5-17</small></p></section>
-<section><h2>Satellite-Based Augmentation Systems (SBAS)</h2><p>The Wide Area Augmentation System (WAAS) administered by the FAA is the most common example.</p><img height='300px' src='images/SBAS_Service_Areas.png'><p><small>"SBAS Service Areas" by Persimplex</small></p></section>
-<section><h2>Real-Time Kinematic (RTK)</h2><p>Dual-frequency solution reducing ionospheric delays.</p><p>Virtual Reference Station (VRS) - A roving receiver is never too far from a base station.</p><img height='300px' src='images/fig5-18.jpg'><p><small>Bolstad 2012, Fig 5-18</small></p></section>
-<section><h2>Datum Warning</h2><p>Remember that a transformation is needed when using different datums. GPS is based on WGS84. Many GPS devices can account for geographic coordinate systems.</p></section>
-<section><h2>Optical/Laser Surveying</h2><p>Plane surveying - horizontal surveying on a planar (flat) surface.</p><img height='450px' src='images/fig5-19.jpg'><p><small>Bolstad 2012, Fig 5-19</small></p></section>
-<section><h2>Surveying Instruments</h2><p>Assuming a flat surface; plumb lines are perpendicular to the surface.</p><p>Surveys are under a few tens of kilometers. The distance error over 10 km is 0.72 cm.</p><img height='350px' src='images/fig5-20.jpg'><p><small>Bolstad 2012, Fig 5-20</small></p></section>
-<section><h2>How It's Done</h2><p>Distances and directions are measured from survey stations. Traverses are series of connected lines that mark the beginning and end of a point. Coordinate geometry (COGO) is used to calculate coordinate locations. Traverses may be open (start and end are different) or closed (end at start).</p></section>
-<section><h2>Example COGO Description</h2><p>"The starting point is a 1-inch rod that is approximately 102.4 feet north and 43.1 feet west of the northeast quarter of the southeast quarter section of section 16 of Township 24 North, Range 16 East, of the 2nd Principal Meridian. Starting from the said point, thence 102.7 feet on a bearing north 72.3 degrees east, to a 1-inch iron pipe; thence 429.6 feet on a bearing south, 64.3 degrees east to a 2-inch iron pipe..."</p></section>
-<section><h2>Azimuth and Bearing</h2><p>Azimuth - Measured clockwise from North.</p><p>Bearing - Measured relative to North or South with the turning direction specified.</p><img height='400px' src='images/fig5-21.jpg'><p><small>Bolstad 2012, Fig 5-21</small></p></section>
-<section><h2>Coordinate Geometry (COGO)</h2><p></p><img height='450px' src='images/fig5-22.jpg'><p><small>Bolstad 2012, Fig 5-22</small></p></section>
-<section><h2>3D Laser Scanners</h2><p></p><img height='450px' src='images/fig5-23.jpg'><p><small>Bolstad 2012, Fig 5-23</small></p></section>
-<section><h2>Types of Receivers</h2><p></p><img height='450px' src='images/fig5-24.jpg'><p><small>Bolstad 2012, Fig 5-24</small></p></section>
-<section><h2>Field Collection</h2><p></p><img height='350px' src='images/fig5-25left.gif'> <img height='350px' src='images/fig5-25right.jpg'><p><small>Bolstad 2012, Fig 5-25</small></p></section>
-<section><h2>Feature Editing</h2><p></p><img height='350px' src='images/fig5-26.jpg'> <img height='350px' src='images/fig5-27.jpg'><p><small>Bolstad 2012, Figs 5-26 and 5-27</small></p></section>
-<section><h2>Visibility in the Field</h2><p>Uneven terrain obstructs sky views.</p><img height='450px' src='images/fig5-28.gif'><p><small>Bolstad 2012, Fig 5-28</small></p></section>
-<section><h2>PDOP vs. Horizon Angle</h2><p>The more sky you see, the better your precision.</p><img height='450px' src='images/fig5-29.gif'><p><small>Bolstad 2012, Fig 5-29</small></p></section>
-<section><h2>Additional Tools</h2><p>Rangefinder - Remotely calculates position and distance.</p><p>Range pole - A pole to mount an antenna on.</p><img height='350px' src='images/fig5-30.jpg'><p><small>Bolstad 2012, Fig 5-30</small></p></section>
-<section><h2>Real-Time Tracking</h2><p></p><img height='450px' src='images/fig5-31.gif'><p><small>Bolstad 2012, Fig 5-31</small></p></section>
-<section><h2>Wildlife Tracking</h2><p>Radio telemetry - Transmitting and receiving radio units.</p><p>More and more, GNSS can be used for this.</p><img height='250px' src='images/fig5-32.jpg'> <img height='250px' src='images/fig5-33.jpg'> <img height='250px' src='images/fig5-34.gif'><p><small>Bolstad 2012, Figs 5-32, 5-33, and 5-34</small></p></section>
+			<section><h2>GNSS</h2><p>Global Navigation Satellite Systems</p><img height='450px' src='images/fig5-1.jpg'><p><small>Bolstad 2012, Fig 5-1</small></p></section>
+			<section><h2>GNSS Systems*</h2><p><ul><li>GPS - USA - NAVSTAR Global Positioning System</li><li>GLONASS - Russian Federation - Global Navigation Satellite System</li><li>BeiDou - China - regional, global in development</li><li>Galileo - EU - in development</li></ul></p><p><small>*Yes, the last "S" in "GNSS" also stands for "Systems"</small></p></section>
+			<section><h2>Segments</h2><p></p><img height='450px' src='images/fig5-2.gif'><p><small>Bolstad 2012, Fig 5-2</small></p></section>
+			<section><h2>GPS Constellation</h2><p><ul><li>Constellation - a collection of satellites working together</li><li>20,000 km above earth</li><li>2x daily, above horizon 8+ hrs per day</li><li>The book suggests 4-8 satellites visible at any time</li><li>21 active + 3 spare, and some more</li></ul></p><img height='300px' src='images/fig5-3.gif'> <img height='300px' src='images/ConstellationGPS.gif'><p><small>Bolstad 2012, Fig 5-3 and Wikimedia Commons</small></p></section>
+			<section><h2>GNSS User</h2><p></p><img height='450px' src='images/fig5-4_left.jpg'> <img height='450px' src='images/fig5-4_right.jpg'><p><small>Bolstad 2012, Fig 5-4</small></p></section>
+			<section><h2>GPS Signals</h2><p><ul><li>Pseudorandom noise (PRN) - signals similar to noise, but consisting short segments of code.</li><li>C/A code - Coded signal; coarse acquisition, PRN.</li><li>P-code - Coded signal; Precision code, PRN.</li><li>L1 - Carrier signal; C/A and P code.</li><li>L2 - Carrier signal; P code.</li></ul></p><img height='250px' src='images/table5-1.jpg'><p><small>Bolstad 2012, Table 5-1</small></p></section>
+			<section><h2>GNSS Terms</h2><p><ul><li>Almanac - system info on time and status of a constellation.</li><li>Ephemeris data - information on the position of satellites and their expectes positions.</li></ul></p></section>
+			<section><h2>Broadcast Signals</h2><p></p><img height='450px' src='images/fig5-5.jpg'><p><small>Bolstad 2012, Fig 5-5</small></p></section>
+			<section><h2>Range</h2><p>The distance between two objects.</p><p>Range = (speed of light) * (travel time)</p><img height='300px' src='images/fig5-6.gif'><p><small>Bolstad 2012, Fig 5-6</small></p></section>
+			<section><h2>Decoded C/A Signal</h2><p></p><img height='450px' src='images/fig5-7.gif'><p><small>Bolstad 2012, Fig 5-7</small></p></section>
+			<section><h2>Range Measurements cont.</h2><p></p><img height='450px' src='images/fig5-8.gif'><p><small>Bolstad 2012, Fig 5-8</small></p></section>
+			<section><h2>Range Uncertainty</h2><p>Ionospheric/Atmospheric Delays - varied speed traveling through the ionsphere/atmosphere.</p><p>Dual Frequency - Some receivers collect from multiple GNSS signals and remove ionospheric errors.</p><p>Multipath - Signals reflected off of objects; take longer to reach the object and are weaker.</p><img height='300px' src='images/fig5-9.gif'><p><small>Bolstad 2012, Fig 5-9</small></p></section>
+			<section><h2>The Horizon</h2><p>More atmosphere to pass through.</p><img height='450px' src='images/fig5-10.jpg'><p><small>Bolstad 2012, Fig 5-10</small></p></section>
+			<section><h2>Positional Accuracy</h2><p></p><img height='450px' src='images/fig5-11.gif'><p><small>Bolstad 2012, Fig 5-11</small></p></section>
+			<section><h2>Dilution of Precison (DOP)</h2><p>Describes effects of satellite location on precision.<ul><li>PDOP - Position (3D). Lower is better, 1-5 is good.</li><li>Also: HDOP (Horizontal), VDOP (Vertical), TDOP (Time), GDOP (Geometric)</li></ul></p><img height='300px' src='images/fig5-12.gif'><p><small>Bolstad 2012, Fig 5-12</small></p></section>
+			<section><h2>GPS Error</h2><p></p><img height='350px' src='images/fig5-13bot.gif'> <img height='350px' src='images/fig5-13top.gif'><p><small>Bolstad 2012, Fig 5-13</small></p></section>
+			<section><h2>Differential GNSS Positioning</h2><p><ul><li>Differential Positioning - Using one or more receivers.</li><li>Base Station - A receiver at a known location.</li></ul></p><img height='350px' src='images/fig5-14.gif'><p><small>Bolstad 2012, Fig 5-14</small></p></section>
+			<section><h2>Differential Correction</h2><p></p><img height='450px' src='images/fig5-15.gif'><p><small>Bolstad 2012, Fig 5-15</small></p></section>
+			<section><h2>Real-Time vs. Post-Processing</h2><p></p><img height='450px' src='images/fig5-16.gif'><p><small>Bolstad 2012, Fig 5-16</small></p></section>
+			<section><h2>GPS Radio Beacons</h2><p><ul><li>Radio beacons - broadcasted signal correction.</li><li>Beacon receivers - a GPS must have a beacon receiver to use the radio beacons</li></ul></p><img height='350px' src='images/fig5-17.gif'><p><small>Bolstad 2012, Fig 5-17</small></p></section>
+			<section><h2>Satellite-Based Augmentation Systems (SBAS)</h2><p>The Wide Area Augmentation System (WAAS) administered by the FAA is the most common example.</p><img height='300px' src='images/SBAS_Service_Areas.png'><p><small>"SBAS Service Areas" by Persimplex</small></p></section>
+			<section><h2>Real-Time Kinematic (RTK)</h2><p>Dual-frequency solution reducing ionospheric delays.</p><p>Virtual Reference Station (VRS) - A roving receiver is never too far from a base station.</p><img height='300px' src='images/fig5-18.jpg'><p><small>Bolstad 2012, Fig 5-18</small></p></section>
+			<section><h2>Datum Warning</h2><p>Remember that a transformation is needed when using different datums. GPS is based on WGS84. Many GPS devices can account for geographic coordinate systems.</p></section>
+			<section><h2>Optical/Laser Surveying</h2><p>Plane surveying - horizontal surveying on a planar (flat) surface.</p><img height='450px' src='images/fig5-19.jpg'><p><small>Bolstad 2012, Fig 5-19</small></p></section>
+			<section><h2>Surveying Instruments</h2><p>Assuming a flat surface; plumb lines are perpendicular to the surface.</p><p>Surveys are under a few tens of kilometers. The distance error over 10 km is 0.72 cm.</p><img height='350px' src='images/fig5-20.jpg'><p><small>Bolstad 2012, Fig 5-20</small></p></section>
+			<section><h2>How It's Done</h2><p>Distances and directions are measured from survey stations. Traverses are series of connected lines that mark the beginning and end of a point. Coordinate geometry (COGO) is used to calculate coordinate locations. Traverses may be open (start and end are different) or closed (end at start).</p></section>
+			<section><h2>Example COGO Description</h2><p>"The starting point is a 1-inch rod that is approximately 102.4 feet north and 43.1 feet west of the northeast quarter of the southeast quarter section of section 16 of Township 24 North, Range 16 East, of the 2nd Principal Meridian. Starting from the said point, thence 102.7 feet on a bearing north 72.3 degrees east, to a 1-inch iron pipe; thence 429.6 feet on a bearing south, 64.3 degrees east to a 2-inch iron pipe..."</p></section>
+			<section><h2>Azimuth and Bearing</h2><p>Azimuth - Measured clockwise from North.</p><p>Bearing - Measured relative to North or South with the turning direction specified.</p><img height='400px' src='images/fig5-21.jpg'><p><small>Bolstad 2012, Fig 5-21</small></p></section>
+			<section><h2>Coordinate Geometry (COGO)</h2><p></p><img height='450px' src='images/fig5-22.jpg'><p><small>Bolstad 2012, Fig 5-22</small></p></section>
+			<section><h2>3D Laser Scanners</h2><p></p><img height='450px' src='images/fig5-23.jpg'><p><small>Bolstad 2012, Fig 5-23</small></p></section>
+			<section><h2>Types of Receivers</h2><p></p><img height='450px' src='images/fig5-24.jpg'><p><small>Bolstad 2012, Fig 5-24</small></p></section>
+			<section><h2>Field Collection</h2><p></p><img height='350px' src='images/fig5-25left.gif'> <img height='350px' src='images/fig5-25right.jpg'><p><small>Bolstad 2012, Fig 5-25</small></p></section>
+			<section><h2>Feature Editing</h2><p></p><img height='350px' src='images/fig5-26.jpg'> <img height='350px' src='images/fig5-27.jpg'><p><small>Bolstad 2012, Figs 5-26 and 5-27</small></p></section>
+			<section><h2>Visibility in the Field</h2><p>Uneven terrain obstructs sky views.</p><img height='450px' src='images/fig5-28.gif'><p><small>Bolstad 2012, Fig 5-28</small></p></section>
+			<section><h2>PDOP vs. Horizon Angle</h2><p>The more sky you see, the better your precision.</p><img height='450px' src='images/fig5-29.gif'><p><small>Bolstad 2012, Fig 5-29</small></p></section>
+			<section><h2>Additional Tools</h2><p>Rangefinder - Remotely calculates position and distance.</p><p>Range pole - A pole to mount an antenna on.</p><img height='350px' src='images/fig5-30.jpg'><p><small>Bolstad 2012, Fig 5-30</small></p></section>
+			<section><h2>Real-Time Tracking</h2><p></p><img height='450px' src='images/fig5-31.gif'><p><small>Bolstad 2012, Fig 5-31</small></p></section>
+			<section><h2>Wildlife Tracking</h2><p>Radio telemetry - Transmitting and receiving radio units.</p><p>More and more, GNSS can be used for this.</p><img height='250px' src='images/fig5-32.jpg'> <img height='250px' src='images/fig5-33.jpg'> <img height='250px' src='images/fig5-34.gif'><p><small>Bolstad 2012, Figs 5-32, 5-33, and 5-34</small></p></section>
 
 
-        </div>
+		</div>
 
-			</div>
+	</div>
 
-			<script src="lib/js/head.min.js">
-			</script>
-			<script src="js/reveal.min.js">
-			</script>
+	<script src="lib/js/head.min.js">
+	</script>
+	<script src="js/reveal.min.js">
+	</script>
 
-			<script>
+	<script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+		// Parallax scrolling
+		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+		// parallaxBackgroundSize: '2100px 900px',
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
 
-			</script>
+	</script>
 
-		</body>
-		</html>
+</body>
+</html>
