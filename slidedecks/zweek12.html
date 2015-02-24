@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Week 12: Spatial Estimation: Interpolation, Prediction, and Core Area Delineation</title>
+
+	<meta name="description" content="Intro to GIS slide deck">
+	<meta name="author" content="Evan Lue">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="elcss/elcss.css">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+	<script>
+	if( window.location.search.match( /print-pdf/gi ) ) {
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = 'css/print/pdf.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	}
+	</script>
+
+
+	<script type="text/javascript">
+	(function() {
+
+		var img = document.getElementById('container').firstChild;
+		img.onload = function() {
+			if(img.height > img.width) {
+				img.height = '100%';
+				img.width = 'auto';
+			}
+		};
+
+	}());
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js">
+</script>
+<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>Week 12:</h2>
+				<h3>Spatial Estimation: Interpolation, Prediction, and Core Area Delineation</h3>
+				<p>
+					<small>Intro to GIS</br>Evan Lue, PhD</small>
+				</p>
+			</section>
+
+
+			<section>
+				<h2>GNSS</h2>
+				<div class="leftside">
+					<p>Global Navigation Satellite Systems</p>
+				</div>
+				<div class="rightside">
+					<img src='images/fig5-1.jpg'>
+					<p>
+						<small>Bolstad 2012, Fig 5-1</small>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-1clear.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.1</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-1haze.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.1</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-1_map.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.1</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-1.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.1</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-2.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.2</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-3.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.3</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-4.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.4</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-5.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.5</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-6.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.6</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-7.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.7</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.1.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.1</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-8.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.8</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.2.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.2</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-9.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.9</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-10.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.10</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-11.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.11</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-12a.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.12</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-12b.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.12</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.3.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.3</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-13.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.13</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.4.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.4</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.5.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.5</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-14.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.14</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.6.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.6</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-15.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.15</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-16.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.16</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.7.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.7</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-17.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.17</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-18.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.18</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-19.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.19</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.8.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.8</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.9.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.9</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.10.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.10</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.11.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.11</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.12.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.12</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.13.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.13</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.14.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.14</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.15.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.15</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-20.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.20</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-21.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.21</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-22.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.22</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-23.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.23</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-24.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.24</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.16.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.16</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.17.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.17</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-25.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.25</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-26.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.26</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-27.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.27</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.18.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.18</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-28.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.28</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.19.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.19</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-29.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 12.29</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-30.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.30</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.20.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.20</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.21.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.21</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-31.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.31</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-32.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.32</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-33.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.33</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/eq_12.22.jpg'>
+				<p>
+					<small>Bolstad 2012, Eq 12.22</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Title</h2>
+				<p>Text</p>
+				<img height='450px' src='images/fig12-34.jpg'>
+				<p>
+					<small>Bolstad 2012, Fig 12.34</small>
+				</p>
+			</section>
+
+
+
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js">
+	</script>
+	<script src="js/reveal.min.js">
+	</script>
+
+	<script>
+
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Parallax scrolling
+		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+		// parallaxBackgroundSize: '2100px 900px',
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+
+	</script>
+
+</body>
+</html>
