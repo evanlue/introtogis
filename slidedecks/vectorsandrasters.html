@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Vectors vs. Rasters</title>
+
+	<meta name="description" content="GIS Lessons slide deck">
+	<meta name="author" content="Evan Lue">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="elcss/elcss.css">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+	<script>
+	if( window.location.search.match( /print-pdf/gi ) ) {
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = 'css/print/pdf.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	}
+	</script>
+
+
+	<script type="text/javascript">
+	(function() {
+
+		var img = document.getElementById('container').firstChild;
+		img.onload = function() {
+			if(img.height > img.width) {
+				img.height = '100%';
+				img.width = 'auto';
+			}
+		};
+
+	}());
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js">
+</script>
+<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h2>GIS Lessons</h2>
+				<h3>Vectors vs. Rasters</h3>
+				</br>
+				<p>
+					<small>Evan Lue, PhD</br>&#169;2015</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>GIS Data Models</h2>
+				</br>
+				<p>A data model is &ldquo;a mathematical construct for representing geographic objects or surfaces as data.&rdquo;</p>
+				<p><small>from the <a href="http://support.esri.com/en/knowledgebase/Gisdictionary/term/data-model" target="_blank">GIS Dictionary</a> by Esri</small></p>
+				</br>
+				<p>Vectors and rasters are the 2 most common of the 3 GIS data models.</p>
+			</section>
+
+			<section>
+				<h2>First Glance</h2>
+				<div class="leftside">
+					<p>Vector</p>
+					<p>Made up of vertices</p>
+					<img src='images/Zoomed_Vector.png'>
+				</div>
+				<div class="rightside">
+					<p>Raster</p>
+					<p>Values in a grid</p>
+					<img src='images/Zoomed_Raster_Coarse.png'>
+				</div>
+			</section>
+
+			<section>
+				<h2>Vectors: Points, Lines, and Polygons</h2>
+				<p>Points are also known as vertices or coordinates pairs</p>
+				<p>Lines and polygons are made of connected vertices</p>
+			  </br>
+				<div class="leftside">
+					<p>Polygons</p>
+					<img src='images/Edit_Line.png'>
+				</div>
+				<div class="rightside">
+					<p>Lines</p>
+					<img src='images/Edit_Polygon.png'>
+				</div>
+			</section>
+
+			<section>
+				<h2>Rasters: Grid Spacing and Pixel Sizes</h2>
+			<div class="leftside">
+				<p>Coarser scale (100m)</p>
+				<img src='images/Zoomed_Raster_Coarse.png'>
+			</div>
+			<div class="rightside">
+				<p>Finer scale (50m)</p>
+				<img src='images/Zoomed_Raster_Medium.png'>
+			</div>
+		</section>
+
+		<section>
+			<h2>Photos Are Rasters!</h2>
+</br>
+		<div class="leftside">
+			<p>Vector file types:</p>
+			<ul>
+				<li>Shapefile (.shp)</li>
+				<li>Scalable Vector Graphics (.svg)</li>
+			</ul>
+		</div>
+		<div class="rightside">
+			<p>Raster file types:</p>
+			<ul>
+				<li>JPG</li>
+				<li>GIF</li>
+				<li>PNG</li>
+				<li>TIFF</li>
+			</ul>
+		</div>
+	</section>
+
+		<section>
+			<h2>Areal Coverage</h2>
+		<div class="leftside">
+			<p>e.g. 2 Vectors</p>
+			<p>Discrete Coverage</p>
+			<img src='images/Vector_Water.png'>
+			<p>Exceptions: polygons can have "full coverage" of an area</p>
+		</div>
+		<div class="rightside">
+			<p>e.g. 1 Raster</p>
+		  <p>Continuous Coverage</p>
+			<img src='images/Zoomed_Raster_Medium.png'>
+			<p>Exceptions: rasters can have gaps</p>
+		</div>
+	</section>
+
+			<section>
+				<h2>How Can You Usually Tell the Difference?</h2>
+				<div class="leftside">
+					<p>Vector</p>
+					<img src='images/Vector_Boundaries_Example.png'>
+					<p>Polygon boundaries and lines can be visibly intricate</p>
+				</div>
+				<div class="rightside">
+					<p>Raster</p>
+					<img src='images/Raster_Example_Coarse.png'>
+					<p>Rasters can appear pixelated</p>
+				</div>
+			</section>
+
+			<section>
+				<h2>But You Can't Always Tell...</h2>
+				<div class="leftside">
+					<p>Vector</p>
+					<img src='images/Vector_Example.png'>
+					<p>Polygons can go without boundaries</p>
+				</div>
+				<div class="rightside">
+					<p>Raster</p>
+					<img src='images/Raster_Example_Fine.png'>
+					<p>
+						<p>There are fine resolution rasters</p>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2>Fine Resolution Rasters</h2>
+					<img src='images/Raster_NLCD.png'>
+					<p>This level of detail is likely too high for a vector; this raster was created with remote sensing and image processing.</p>
+			</section>
+
+
+						<section>
+							<h2>How Can You Really Tell?</h2>
+						</br>
+							<p>Examine the file. For example, use Windows Explorer or another application.<p>
+							</br>
+							<p>Interact with the file. Zoom in and click around in a GIS application.<p>
+						</section>
+
+						<section>
+							<h2>When This Matters</h2>
+						</br>
+							<div class="leftside">
+								<img src='images/DiscreteEntities.png'>
+								<p>Use vectors when mapping discrete entities with varying attributes. There are several vector files here.</p>
+							</div>
+							<div class="rightside">
+								<img src='images/ContinuousTheme.png'>
+								<p>Use rasters when mapping a common continuous theme. There is one raster file here.</p>
+							</div>
+						</section>
+
+						<section>
+							<h2>Game Time: Vector or Raster?</h2>
+							<img src='images/Quiz1.png'>
+						</section>
+
+						<section>
+							<h2>Vector</h2>
+							<img src='images/Quiz1.png'>
+<p>Contours are lines. They indicate elevation, but not continuously like an elevation raster.</p>
+						</section>
+
+						<section>
+							<h2>This One?</h2>
+							<img src='images/Quiz2.png'>
+						</section>
+
+						<section>
+							<h2>Raster</h2>
+							<img src='images/Quiz2.png'>
+							<p>Photos are rasters, remember? That includes aerial/satellite imagery.</p>
+						</section>
+
+						<section>
+							<h2>Last One</h2>
+							<img src='images/Quiz3.png'>
+						</section>
+
+						<section>
+							<h2>Both!</h2>
+							<img src='images/Quiz3.png'>
+							<p>Vector and raster are data models, and you can have multiple datasets on the same map.</p>
+						</section>
+
+
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js">
+	</script>
+	<script src="js/reveal.min.js">
+	</script>
+
+	<script>
+
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Parallax scrolling
+		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+		// parallaxBackgroundSize: '2100px 900px',
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+
+	</script>
+
+</body>
+</html>
