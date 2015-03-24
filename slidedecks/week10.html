@@ -67,23 +67,9 @@
 				</p>
 			</section>
 
-
 			<section>
-				<h2>GNSS</h2>
-				<div class="leftside">
-					<p>Global Navigation Satellite Systems</p>
-				</div>
-				<div class="rightside">
-					<img src='images/fig5-1.jpg'>
-					<p>
-						<small>Bolstad 2012, Fig 5-1</small>
-					</p>
-				</div>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Map Algebra</h2>
+				<p>Calculations performed on raster pixels</p>
 				<img height='450px' src='images/fig10-1.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.1</small>
@@ -91,26 +77,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_10.1.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 10.1</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_10.2.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 10.2</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Pixel Alignment</h2>
+				<p>Map algebra between unaligned rasters require resampling one raster to match the other.</p>
 				<img height='450px' src='images/fig10-2.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.2</small>
@@ -118,8 +86,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Three Classes of Functions</h2>
+				<p>Local, neighborhood, and global functions</p>
 				<img height='450px' src='images/fig10-3.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.3</small>
@@ -127,17 +95,11 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_10.3.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 10.3</small>
-				</p>
+				<h2>Local Functions</h2>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Mathematical Functions</h2>
 				<img height='450px' src='images/table10.1.jpg'>
 				<p>
 					<small>Bolstad 2012, Table 10.1</small>
@@ -145,8 +107,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Boolean Operators</h2>
+				<p>Outcomes are Boolean data type: true and false (or null)</p>
 				<img height='450px' src='images/fig10-4.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.4</small>
@@ -154,8 +116,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Relational Operators</h2>
+				<p>Again, outcomes are Boolean data type</p>
 				<img height='450px' src='images/fig10-5.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.5</small>
@@ -163,8 +125,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Example of a Logical Operation</h2>
+				<p>Where has landuse changed in the last year?</p>
 				<img height='450px' src='images/fig10-6.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 10.6</small>
@@ -172,8 +134,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Reclassification</h2>
+				<p>Similar to when you classify symbology in ArcMap</p>
 				<img height='450px' src='images/fig10-7.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.7</small>
@@ -181,8 +143,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Conditional Reclassification</h2>
+				<p>Where LayerA is less than 3, the pixel value is that of LayerB. Otherwise, it is that of LayerC.</p>
 				<img height='450px' src='images/fig10-8.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.8</small>
@@ -190,8 +152,7 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Another Example</h2>
 				<img height='450px' src='images/fig10-9.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 10.9</small>
@@ -199,8 +160,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Overlay</h2>
+				<p>Cell-by-cell combination of pixel values results in new data values representing unique combinations of attributes.</p>
 				<img height='450px' src='images/fig10-10.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.10</small>
@@ -208,17 +169,25 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig10-11.gif'>
+				<h2>Clip or Extract</h2>
+				<p>Example: the input is surface temperature and the clip raster is land (vs. water). We want a land surface temperature map.
+				<div class="leftside">
+				<img src='images/fig10-11.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.11</small>
 				</p>
+			</div>
+			<div class="rightside">
+				<img src='images/fig10-14.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 10.14</small>
+				</p>
+			</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Raster Addition</h2>
+				<p>This is a good example where the ID value for one raster is a different order of magnitude than the other.</p>
 				<img height='450px' src='images/fig10-12.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.12</small>
@@ -226,8 +195,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Addition with Ambiguous Combinations</h2>
+				<p>In this example, the Output's 3 can mean LayerA's 1 + LayerbB's 2, or it can mean LayerA's 2 + LayerbB's 1.</p>
 				<img height='450px' src='images/fig10-13.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.13</small>
@@ -235,17 +204,12 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig10-14.gif'>
-				<p>
-					<small>Bolstad 2012, Fig 10.14</small>
-				</p>
+				<h2>Neighborhood Functions</h2>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Moving Window</h2>
+				<p>Calculations are done on pixels based on surrounding values. The "window" of surrounding pixels "moves" when we calculate for different pixels.</p>
 				<img height='450px' src='images/fig10-15.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.15</small>
@@ -253,8 +217,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Some Moving Window Operations</h2>
+				<p>We will see majority in action on the next slide.</p>
 				<img height='450px' src='images/fig10-16.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.16</small>
@@ -262,8 +226,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>An Example of a Majority Filter</h2>
+				<p>How we get rid of "isolated" pixels.</p>
 				<img height='450px' src='images/fig10-17.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 10.17</small>
@@ -271,8 +235,24 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Defining the Neighborhood</h2>
+				<div class="leftside">
+					<p>4 neighbors</p>
+					sometimes: cardinal directions
+					infrequently: Rook's case
+					very infrequently: von Neumann neighborhood
+				</div>
+				<div class="rightside">
+					<p>8 neighbors</p>
+					sometimes: cardinal and diagonal directions
+					infrequently: Queen's case
+					very infrequently: Moore neighborhood
+				</div>
+			</section>
+
+			<section>
+				<h2>Kernel</h2>
+				<p>The set of cell constants for a moving window.</p>
 				<img height='450px' src='images/fig10-18.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.18</small>
@@ -280,8 +260,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Margin Kernels</h2>
+				<p>The margins (or edges) of rasters will not have 3x3 kernels.</p>
 				<img height='450px' src='images/fig10-19.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 10.19</small>
@@ -289,26 +269,34 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig10-20.gif'>
-				<p>
-					<small>Bolstad 2012, Fig 10.20</small>
-				</p>
+				<h2>Edge Detection</h2>
+				<div class="leftside">
+					<img src='images/fig10-20.gif'>
+					<p>
+						<small>Bolstad 2012, Fig 10.20</small>
+					</p>
+				</div>
+				<div class="rightside">
+					<p>Horizontal and vertical kernels to detect steep value changes in rasters.</p>
+				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig10-21.gif'>
-				<p>
-					<small>Bolstad 2012, Fig 10.21</small>
-				</p>
+				<h2>High-Pass Filter</h2>
+				<div class="leftside">
+					<p>Enhances edges (the opposite of smoothing) to identify "noisy" pixels.</p>
+				</div>
+				<div class="rightside">
+					<img src='images/fig10-21.gif'>
+					<p>
+						<small>Bolstad 2012, Fig 10.21</small>
+					</p>
+				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Kernels Can Increase Spatial Covariance</h2>
+				<p>A measure of similarity of nearby values, high covariance means high values with have nearby high values and low values will have nearby low values.</p>
 				<img height='450px' src='images/fig10-22.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.22</small>
@@ -316,8 +304,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Zonal Functions</h2>
+				<p>Averaging within zones.</p>
 				<img height='450px' src='images/fig10-23.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 10.23</small>
@@ -325,8 +313,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Cost Surface</h2>
+				<p>Distance along a raster, multipied by cost.</p>
 				<img height='450px' src='images/fig10-24.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.24</small>
@@ -334,8 +322,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Friction</h2>
+				<p>Costs varying by pixel.</p>
 				<img height='450px' src='images/fig10-25.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.25</small>
@@ -343,26 +331,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_10.4.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 10.4</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_10.5.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 10.5</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Row/Column Distance</h2>
+				<p>Sometimes called Manhattan distance or taxicab geometry.</p>
 				<img height='450px' src='images/fig10-26.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 10.26</small>
