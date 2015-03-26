@@ -1,0 +1,22 @@
+Display XY data
+Geocode within ArcMap
+	Geocode with https://gis.lacounty.gov/ArcGIS
+	Review https://gis.lacounty.gov/ArcGIS/rest/services
+Create a layer from a selection
+Create a new shapefile of a selection from export
+	Differentiate between GDB feature class and shapefile
+Create a KML
+Import a KML
+
+
+
+ArcGIS Online
+	Create an account
+	Do not try the 30-day trial
+	Add layers
+	Differentiate between a layer, a map, and an app
+	Embed a map into HTML
+Google My Maps
+	Use Google Search to find points to add
+	Import a KML
+	Export a KML
