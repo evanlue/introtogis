@@ -69,21 +69,33 @@
 
 
 			<section>
-				<h2>GNSS</h2>
+				<h2>Terrain is Important</h2>
 				<div class="leftside">
-					<p>Global Navigation Satellite Systems</p>
+					<p>
+						<ul>
+							<li>Water supply</li>
+							<li>Water quality</li>
+							<li>Soil moisture</li>
+							<li>Drainage</li>
+							<li>Flood zones</li>
+						</ul>
+					</p>
 				</div>
 				<div class="rightside">
-					<img src='images/fig5-1.jpg'>
 					<p>
-						<small>Bolstad 2012, Fig 5-1</small>
+						<ul>
+							<li>Land cover</li>
+							<li>Land use</li>
+							<li>Construction</li>
+							<li>Transportation networks</li>
+							<li>Utility networks</li>
+						</ul>
 					</p>
 				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>DEM or Hillshade?</h2>
 				<img height='450px' src='images/fig11-1.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.1</small>
@@ -91,8 +103,7 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Terrain Variables</h2>
 				<img height='450px' src='images/table11.1.jpg'>
 				<p>
 					<small>Bolstad 2012, Table 11.1</small>
@@ -100,8 +111,7 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Slope and Aspect</h2>
 				<img height='450px' src='images/fig11-2.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.2</small>
@@ -109,8 +119,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Slope</h2>
+				<p>Simple trigonometry in 2 dimensions</p>
 				<img height='450px' src='images/fig11-3.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.3</small>
@@ -118,8 +128,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Slope in 3D</h2>
+				<p>A hill can have different slopes in different directions</p>
 				<img height='450px' src='images/fig11-4.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.4</small>
@@ -127,8 +137,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Slope Ignores Cell Centers</h2>
+				<p>Calculations factor in many surrounding cells</p>
 				<img height='450px' src='images/fig11-5.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.5</small>
@@ -136,8 +146,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Calculating Slope</h2>
+				<p>4 neighbors are used for this calculation</p>
 				<img height='450px' src='images/fig11-6.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.6</small>
@@ -145,26 +155,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_11.1.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 11.1</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_11.2.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 11.2</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Slope Kernels</h2>
+				<p>The 3rd-order finite difference method uses 8 neighbors</p>
 				<img height='450px' src='images/fig11-7.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.7</small>
@@ -172,44 +164,58 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_11.4.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 11.4</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig11-8.gif'>
+				<h2>Aspect</h2>
+				<div class="leftside">
+				<img src='images/fig11-8.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.8</small>
 				</p>
+				</div>
+				<div class="rightside">
+				<p>
+					<ul>
+					<li>The direction that the slope faces, or its azimuth direction.</li>
+					<li>Flat lands have no aspect.</li>
+					</ul>
+				</p>
+				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Curvature</h2>
+				<div class="leftside">
+					<ul>
+					<li><strong>Profile curvature</strong> - the curve in the direction of the slope.</li>
+					<li><strong>Plan curvature</strong> - the terrain's curvature perpendicular to the slope.</li>
+					</ul>
+				</div>
+				<div class="rightside">
 				<img height='450px' src='images/fig11-9.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.9</small>
 				</p>
+				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Morphometric Features</h2>
+				<div class="leftside">
 				<img height='450px' src='images/fig11-10.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.10</small>
 				</p>
+				</div>
+				<div class="rightside">
+					<ul>
+					<li><strong>Morphometry</strong> - the measurement of forms and shapes.</li>
+					<li>These features make up the terrain and determine flows.</li>
+					</ul>
+				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Hillshade on the Left...</h2>
+				<p>On the right is...</p>
 				<img height='450px' src='images/fig11-11.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.11</small>
@@ -217,17 +223,28 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig11-12.gif'>
-				<p>
-					<small>Bolstad 2012, Fig 11.12</small>
-				</p>
+				<h2>Hydrology Products</h2>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Watersheds</h2>
+				<div class="leftside">
+				<ul>
+				<li>Also known as basins and catchments.</li>
+				<li>Delineates all areas which will flow/drain to the same point.</li>
+				</ul>
+				</div>
+				<div class="rightside">
+				<img src='images/fig11-12.gif'>
+				<p>
+					<small>Bolstad 2012, Fig 11.12</small>
+				</p>
+				</div>
+			</section>
+
+			<section>
+				<h2>Drainage Network</h2>
+				<p>Calculated from flow direction.</p>
 				<img height='450px' src='images/fig11-13.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.13</small>
@@ -235,8 +252,7 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Divergent, Convergent, and Simple Flow</h2>
 				<img height='450px' src='images/fig11-14.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.14</small>
@@ -244,8 +260,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Apportioning Flow</h2>
+				<p>Multiple methods (like slope calculations)</p>
 				<img height='450px' src='images/fig11-15.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.15</small>
@@ -253,8 +269,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Spurious Pits</h2>
+				<p>Also called sinks; artifacts of geoprocessing that can cause "pooled water"".</p>
 				<img height='450px' src='images/fig11-16.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.16</small>
@@ -262,8 +278,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Filled DEMs</h2>
+				<p>Pits remain on the right. Pits removed on the right.</p>
 				<img height='450px' src='images/fig11-17.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.17</small>
@@ -271,44 +287,32 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Correct Watershed Creation</h2>
+				<div class="leftside">
+					<ol>
+						<li>Fill DEM</li>
+						<li>Flow direction</li>
+						<li>Flow accumulation</li>
+						<li>Stream threshold</li>
+						<li>Place outlets</li>
+						<li>Watershed</li>
+					</ol>
+				</div>
+				<div class="rightside">
 				<img height='450px' src='images/fig11-19.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.19</small>
 				</p>
+				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_11.5.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 11.5</small>
-				</p>
+				<h2>Other Terrain Analysis Products</h2>
 			</section>
-
+			
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_11.6.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 11.6</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_11.7.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 11.7</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Viewshed</h2>
+				<p>The area which visible from a specific location based on terrain.</p>
 				<img height='450px' src='images/fig11-20.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.20</small>
@@ -316,8 +320,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Viewshed</h2>
+				<p>White areas represent visible locations.</p>
 				<img height='450px' src='images/fig11-21.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.21</small>
@@ -325,8 +329,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Elevation Profiles</h2>
+				<p>Useful for hiking, bicycling, or even scuba diving.</p>
 				<img height='450px' src='images/fig11-22.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.22</small>
@@ -334,8 +338,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Contour Lines</h2>
+				<p>Lines of uniform elevation.</p>
 				<img height='450px' src='images/fig11-23.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.23</small>
@@ -343,8 +347,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Interpolating Contours</h2>
+				<p>Based on known elevations at various points.</p>
 				<img height='450px' src='images/fig11-24.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.24</small>
@@ -352,8 +356,7 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Contours for Yosemite</h2>
 				<img height='450px' src='images/fig11-25.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.25</small>
@@ -361,8 +364,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Two Terrain Products in This Picture</h2>
+				<p>What are they?</p>
 				<img height='450px' src='images/fig11-26.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.26</small>
@@ -370,8 +373,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Shaded Reliefs</h2>
+				<p>Commonly called hillshades. Creating shadows requires simulating sunlight.</p>
 				<img height='450px' src='images/fig11-27.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 11.27</small>
@@ -379,12 +382,18 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Hillshade Parameters</h2>
+				<div class="leftside">
+					<ul>
+					<li><strong>Solar zenith</strong> - the angle created between an orthogonal axis at the surface and the sun's position.</li>
+					<li><strong>Solar azimuth</strong> - the compass direction of the sun in the sky.</li>
+				</div>
+				<div class="rightside">
 				<img height='450px' src='images/fig11-28.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 11.28</small>
 				</p>
+				</div>
 			</section>
 
 
