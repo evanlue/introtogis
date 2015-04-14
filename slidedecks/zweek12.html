@@ -66,50 +66,9 @@
 				</p>
 			</section>
 
-
 			<section>
-				<h2>GNSS</h2>
-				<div class="leftside">
-					<p>Global Navigation Satellite Systems</p>
-				</div>
-				<div class="rightside">
-					<img src='images/fig5-1.jpg'>
-					<p>
-						<small>Bolstad 2012, Fig 5-1</small>
-					</p>
-				</div>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig12-1clear.jpg'>
-				<p>
-					<small>Bolstad 2012, Fig 12.1</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig12-1haze.jpg'>
-				<p>
-					<small>Bolstad 2012, Fig 12.1</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig12-1_map.gif'>
-				<p>
-					<small>Bolstad 2012, Fig 12.1</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Interpolation</h2>
+				<p>The estimation of a variable across a surface based on a sample of measurements.</p>
 				<img height='450px' src='images/fig12-1.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 12.1</small>
@@ -117,17 +76,25 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Sampling Points</h2>
+				<div class="leftside">
 				<img height='450px' src='images/fig12-2.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 12.2</small>
 				</p>
+				</div>
+				<div class="rightside">
+					<ul>
+						<li>Systematic</li>
+						<li>Random</li>
+						<li>Clustered</li>
+						<li>Adaptive (more samples in places of interest)</li>
+					</ul>
+				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Example of Adaptive Sampling</h2>
 				<img height='450px' src='images/fig12-3.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 12.3</small>
@@ -135,8 +102,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Nearest Neighbor Interpolation</h2>
+				<p>aka Thiessen polygons, aka a Voronoi diagram</p>
 				<img height='450px' src='images/fig12-4.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 12.4</small>
@@ -144,8 +111,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Fixed Radius Interpolation</h2>
+				<p>Search radius is a parameter to be defined</p>
 				<img height='450px' src='images/fig12-5.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 12.5</small>
@@ -153,8 +120,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Fixed Radius cont.</h2>
+				<p>Vector points to a raster surface</p>
 				<img height='450px' src='images/fig12-6.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 12.6</small>
@@ -162,8 +129,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Fixed Radius cont.</h2>
+				<p>Raster results</p>
 				<img height='450px' src='images/fig12-7.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 12.7</small>
@@ -171,44 +138,50 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_12.1.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 12.1</small>
-				</p>
+				<h2>Inverse Distance Weighting (IDW)</h2>
+					<img height='450px' src='images/fig12-8.gif'>
+					<p>
+						<small>Bolstad 2012, Fig 12.8</small>
+					</p>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/fig12-8.gif'>
-				<p>
-					<small>Bolstad 2012, Fig 12.8</small>
-				</p>
+				<h2>Inverse Distance Weighting (IDW)</h2>
+				<div class="leftside">
+					<img height='450px' src='images/eq_12.1.jpg'>
+					<p>
+						<small>Bolstad 2012, Eq 12.1</small>
+					</p>
+				</div>
+				<div class="rightside">
+					<ul>
+					<li>n is the exponent that influences distance weights
+					</li>
+					<li>i is the sample size to include</li>
+					</ul>
+				</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
-				<img height='450px' src='images/eq_12.2.jpg'>
-				<p>
-					<small>Bolstad 2012, Eq 12.2</small>
-				</p>
-			</section>
-
-			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Varying IDW Parameters</h2>
+				<div class="leftside">
 				<img height='450px' src='images/fig12-9.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 12.9</small>
 				</p>
+			</div>
+			<div class="rightside">
+				<ul>
+				<li>n is the exponent that influences distance weights
+				</li>
+				<li>i is the sample size to include</li>
+				</ul>
+			</div>
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Splines</h2>
+				<p>Applying polynomial functions to fit points</p>
 				<img height='450px' src='images/fig12-10.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 12.10</small>
@@ -216,8 +189,7 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Spline Interpolations</h2>
 				<img height='450px' src='images/fig12-11.jpg'>
 				<p>
 					<small>Bolstad 2012, Fig 12.11</small>
@@ -225,8 +197,12 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Spatial Prediction</h2>
+			</section>
+
+			<section>
+				<h2>Spatial Autocorrelation</h2>
+				<p>How do values vary in close proximity</p>
 				<img height='450px' src='images/fig12-12a.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 12.12</small>
@@ -234,8 +210,8 @@
 			</section>
 
 			<section>
-				<h2>Title</h2>
-				<p>Text</p>
+				<h2>Cross Correlation</h2>
+				<p>Same as a correlation between two variables</p>
 				<img height='450px' src='images/fig12-12b.gif'>
 				<p>
 					<small>Bolstad 2012, Fig 12.12</small>
